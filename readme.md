@@ -13,7 +13,11 @@
 Instantiate a new Angular module called `BlogPost` that takes `ui.router` as a dependency. Use Angular code style conventions.
 
 **Your answer:**
-```js
+
+```
+(function (){
+  angular.module("ui.router", BlogPost);
+  })();
 
 ```
 
@@ -53,7 +57,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 
 **Your answer:**
 
-> ...
+> A demonstrates the best usage of 'ng-app'. It will always be at the top html.
 
 ### A:
 ```html
@@ -72,7 +76,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### B:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head data-ng-app="myapp">
     <title>My app</title>
   </head>
@@ -86,7 +90,7 @@ Which of the following demonstrates the best usage of `ng-app`? **Explain your a
 ### C:
 ```html
 <!DOCTYPE html>
-<html> 
+<html>
   <head>
     <title>My app</title>
   </head>
@@ -103,6 +107,8 @@ Imagine an app in which a change to the view updates the model without a page re
 
 Which one of the following concepts does this best illustrate?
 
+C: Two-way data-binding
+
 ```
 [ ] A: Modularity
 [ ] B: MVC
@@ -116,7 +122,7 @@ What is an IIFE, and why might you use it?
 
 **Your answer:**
 
-> ...
+> IIFE stands for Immediately-Invoked Function Expression. It executes immediately after it is created.
 
 ## Question 7
 
@@ -124,7 +130,7 @@ What is the `ui-sref` directive, and how is it used?
 
 **Your answer:**
 
-> ...
+> A directive that binds a link (<a> tag) to a state. If the state has an associated URL, the directive will automatically generate & update the href attribute via the $state.href() method. Clicking the link will trigger a state transition with optional parameters.
 
 ## Question 8
 
@@ -160,7 +166,7 @@ Of the three following options, which is the most "correct" way of organizing th
 
 **Your answer:**
 
-> ...
+>C shows the most correct way of organizing the files that make up an Angular app. This option is considered better than the other two because all of JS is under one folder and the HTML is under its own folder.
 
 
 ### A:
@@ -212,4 +218,3 @@ Of the three following options, which is the most "correct" way of organizing th
   songs/
     form.html
 ```
-
